@@ -111,10 +111,14 @@ static void updateTopDeathsLabel(LevelInfoLayer* self) {
 }
 
 class $modify(HighestDeathPlayLayer, PlayLayer) {
-    bool m_isPractice = false;
+    struct Fields {
+        bool m_isPractice = false;
+    };
+    
+    
 
     bool init(GJGameLevel* level, bool useReplay, bool dontCreateObjects) {
-        m_isPractice = useReplay;
+        m_fields->m_isPractice = useReplay;
         return PlayLayer::init(level, useReplay, dontCreateObjects);
     }
 
@@ -127,7 +131,7 @@ class $modify(HighestDeathPlayLayer, PlayLayer) {
 
         bool countPractice = Mod::get()->getSettingValue<bool>("Enable-practice");
 
-        if (!m_isPractice || countPractice) {
+        if (!m_fields->m_isPractice || countPractice) {
             int percent = this->getCurrentPercentInt();
             if (percent > 0) {
                 auto deaths = loadDeathsForLevel(level);
