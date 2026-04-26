@@ -8,7 +8,7 @@
 	},
 	"id": "bludot.highest-death-rate",
 	"name": "highest % death",
-	"version": "v1.0.0",
+	"version": "v1.0.1",
 	"developer": "BluDot",
 	"description": "",
 	"dependencies": {
@@ -18,7 +18,7 @@
 		"top-death-count": {
 		"type": "int",
 		"name": "Top Death entries",
-		"description": "How many death percentages to show",
+		"description": "Your most deaths in a % in a level",
 		"default": 3,
 		"min": 1,
 		"max": 4
