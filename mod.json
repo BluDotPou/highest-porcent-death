@@ -22,12 +22,6 @@
 		"default": 3,
 		"min": 1,
 		"max": 4
-		},
-		"Enable-practice": {
-			"type": "bool",
-			"name": "enable in practice",
-			"description": "enable the couter of deaths in practice",
-			"default": false
 		}
 	}
 }

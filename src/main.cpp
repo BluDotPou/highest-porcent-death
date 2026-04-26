@@ -113,9 +113,9 @@ static void updateTopDeathsLabel(LevelInfoLayer* self) {
 class $modify(HighestDeathPlayLayer, PlayLayer) {
     bool m_isPractice = false;
 
-    bool init(GJGameLevel* level, bool useReplay, bool dontCreateObjects) {
+    bool init(GJGameLevel* level, bool useReplay) {
         m_isPractice = useReplay;
-        return PlayLayer::init(level, useReplay, dontCreateObjects);
+        return PlayLayer::init(level, useReplay);
     }
 
     void destroyPlayer(PlayerObject* player, GameObject* object) {
